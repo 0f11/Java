@@ -5,8 +5,8 @@ public class Code {
     public static void main(String[] args) {
 
         Integer[] numbers = new Integer[]{1, 2, 3, 4, 5};
-        String svalue = "ab" + 1;
-        System.out.println(asString(numbers)); // 11
+        String svalue = "a2b4s";
+        System.out.println(squareDigits(svalue)); // 11
     }
 
     public static Integer sum(Integer[] numbers) {
@@ -53,14 +53,15 @@ public class Code {
 
     public static String squareDigits(String svalue) {
         String sqroot = "";
-        for (char chars : svalue.toCharArray()) {
-            if (Character.isDigit(chars)) {
-                String i = Character.toString(chars);
-                int x = Integer.parseInt(i);
+        for (int i = 0, n = svalue.length() ; i < n ; i++) {
+            char c = svalue.charAt(i);
+            if (Character.isDigit(c)) {
+                String y = Character.toString(c);
+                int x = Integer.parseInt(y);
                 sqroot += x * x;
             }
             else {
-                sqroot += chars;
+                sqroot += c;
             }
         }
         return sqroot;
