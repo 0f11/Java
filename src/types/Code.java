@@ -6,7 +6,7 @@ public class Code {
 
         Integer[] numbers = new Integer[]{1, 2, 3, 4, 5};
         String svalue = "ab" + 1;
-        System.out.println(squareDigits(svalue)); // 11
+        System.out.println(asString(numbers)); // 11
     }
 
     public static Integer sum(Integer[] numbers) {
@@ -45,10 +45,10 @@ public class Code {
     public static String asString(Integer[] elements) {
         String entry = "";
         for (Integer element : elements) {
-
             entry += element + ", ";
+
         }
-        return entry;
+        return entry.substring(0, entry.length() - 2);
     }
 
     public static String squareDigits(String svalue) {
