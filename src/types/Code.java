@@ -44,7 +44,7 @@ public class Code {
 
     public static String asString(Integer[] elements) {
         if (elements.length == 0) {
-            return null;
+            return "";
         }
 
         String entry = "";
