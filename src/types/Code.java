@@ -4,9 +4,9 @@ public class Code {
 
     public static void main(String[] args) {
 
-        Integer[] numbers = new Integer[]{1, 2, 3, 4, 5};
-        String svalue = "a2b4s";
-        System.out.println(squareDigits(svalue)); // 11
+        Integer[] numbers = new Integer[]{-2};
+        String svalue = "abs" + 1;
+        System.out.println(asString(numbers)); // 11
     }
 
     public static Integer sum(Integer[] numbers) {
@@ -43,7 +43,12 @@ public class Code {
     }
 
     public static String asString(Integer[] elements) {
+        if (elements.length == 0) {
+            return null;
+        }
+
         String entry = "";
+
         for (Integer element : elements) {
             entry += element + ", ";
 
