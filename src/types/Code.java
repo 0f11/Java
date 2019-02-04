@@ -10,11 +10,11 @@ public class Code {
     }
 
     public static Integer sum(Integer[] numbers) {
-        Integer sum1 = 0;
+        Integer sum11 = 0;
         for (Integer number : numbers) {
-            sum1 += number;
+            sum11 += number;
         }
-        return sum1;
+        return sum11;
     }
 
 
