@@ -34,29 +34,32 @@ public class Code {
 
     public static Integer[] removeDuplicates(Integer[] input) {
         Integer[] returnMas = new Integer[input.length];
-        int index = 0;
-        int dupCount = 0;
-        for(int i = 0; i < input.length - 1; i++) {
-            Integer currentEl = input[i];
-            if (currentEl != input[i+1]) {
-                returnMas[index++] = currentEl;
-            }else{
-                dupCount++;
+        int x = 0;
+        Arrays.sort(input);
+        int counter = 0;
+        int size = input.length;
+        for (int i = 0; i < size - 1; i++) {
+            if (input[i] != input[i + 1]) {
+                returnMas[x++] = input[i];
+            } else {
+                counter++;
             }
         }
-        System.out.println(dupCount);
-        returnMas[index++] = input[input.length - 1];
 
-        Integer[] correctReturn = new Integer[input.length - dupCount];
-        int indexTwo = 0;
-        for(int i = 0; i < returnMas.length; i++) {
-            if(returnMas[i] != null) {
-                correctReturn[indexTwo++] = returnMas[i];
-
+        returnMas[x++] = input[size - 1];
+        for (int i = 0; i < x; i++) {
+            input[i] = returnMas[i];
+        }
+        Integer[] returnable = new Integer[input.length - counter];
+        int y = 0;
+        for (int i = 0; i < returnable.length; i++) {
+            if (returnMas[i] != null) {
+                returnable[y++] = returnMas[i];
             }
         }
-        return correctReturn;
+        return returnable;
     }
+
 
     public static Integer sumIgnoringDuplicates(Integer[] integers) {
         return null;
