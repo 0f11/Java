@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
 public class Tests {
-    //TEST
+
     @Test
     public void equalityExamples() {
 
@@ -46,10 +46,10 @@ public class Tests {
 
     @Test
     public void removesDuplicates() {
-        assertThat(Code.removeDuplicates(arrayOf(1, 2, 3)), is(arrayOf(1)));
+//        assertThat(Code.removeDuplicates(arrayOf(1, 1)), is(arrayOf(1)));
 
-//        assertThat(Code.removeDuplicates(arrayOf(1, 2, 1, 2)), is(arrayOf(1, 2)));
-//
+        assertThat(Code.removeDuplicates(arrayOf(1, 2, 1, 2)), is(arrayOf(1, 2)));
+
 //        assertThat(Code.removeDuplicates(arrayOf(1, 2, 3)), is(arrayOf(1, 2, 3)));
     }
 

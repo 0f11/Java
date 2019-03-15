@@ -7,7 +7,7 @@ public class Code {
     public static boolean isSpecial(Integer number) {
         return false;
     }
- //test
+
     public static Integer longestStreak(String input) {
         if (input.length() == 0) {
             return 0;
@@ -34,17 +34,28 @@ public class Code {
 
     public static Integer[] removeDuplicates(Integer[] input) {
         Integer[] returnMas = new Integer[input.length];
-        for(int i = 0; i < input.length; i++) {
-            for(int x = i + 1; x < input.length; x++) {
-                if(input[i].equals(input[x])) {
-                    ;
-                }else{
-                    returnMas[i] = input[i];
-                }
+        int index = 0;
+        int dupCount = 0;
+        for(int i = 0; i < input.length - 1; i++) {
+            Integer currentEl = input[i];
+            if (currentEl != input[i+1]) {
+                returnMas[index++] = currentEl;
+            }else{
+                dupCount++;
             }
         }
-        System.out.println(Arrays.toString(returnMas));
-        return returnMas;
+        System.out.println(dupCount);
+        returnMas[index++] = input[input.length - 1];
+
+        Integer[] correctReturn = new Integer[input.length - dupCount];
+        int indexTwo = 0;
+        for(int i = 0; i < returnMas.length; i++) {
+            if(returnMas[i] != null) {
+                correctReturn[indexTwo++] = returnMas[i];
+
+            }
+        }
+        return correctReturn;
     }
 
     public static Integer sumIgnoringDuplicates(Integer[] integers) {
