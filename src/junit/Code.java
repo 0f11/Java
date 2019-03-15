@@ -7,7 +7,7 @@ public class Code {
     public static boolean isSpecial(Integer number) {
         return false;
     }
-
+ //test
     public static Integer longestStreak(String input) {
         if (input.length() == 0) {
             return 0;
