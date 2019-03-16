@@ -62,7 +62,12 @@ public class Code {
 
 
     public static Integer sumIgnoringDuplicates(Integer[] integers) {
-        return null;
+        Integer[] sum = removeDuplicates(integers);
+        int returnable = 0;
+        for(int nr : sum) {
+            returnable += nr;
+        }
+        return returnable;
     }
 
 }
