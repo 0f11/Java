@@ -5,6 +5,9 @@ import java.util.Arrays;
 public class Code {
 
     public static boolean isSpecial(Integer number) {
+        if(number%11 <= 1) {
+            return true;
+        }
         return false;
     }
 
