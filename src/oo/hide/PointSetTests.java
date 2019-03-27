@@ -59,7 +59,7 @@ public class PointSetTests {
                 .collect(Collectors.toList());
 
         if (integerArrayFields.size() == 0) {
-            fail("PointSet should have a field of type Point[]");
+            fail("PointSet should have a field of type Point[].");
         }
 
         if (integerArrayFields.size() > 1) {

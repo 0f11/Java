@@ -21,7 +21,7 @@ public class Point {
     public boolean equals(Object obj) {
         if(!(obj instanceof Point)) {
             return false;
-        }
+        };
 
         Point other = (Point) obj;
         return Objects.equals(x, other.x) && Objects.equals(y, other.y);

@@ -1,5 +1,4 @@
 package oo.hide;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class PointSet {
