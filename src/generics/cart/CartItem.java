@@ -6,4 +6,9 @@ public interface CartItem {
 
     public Double getPrice();
 
+    public Double getFullPrice();
+
+    public void setFullPrice(Double fullPrice);
+
+    public void setPrice(Double price);
 }

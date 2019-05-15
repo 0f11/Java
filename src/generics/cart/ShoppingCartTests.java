@@ -20,6 +20,7 @@ public class ShoppingCartTests {
         cart.add(new Product("i2", 5.0));
 
         assertThat(cart.getTotal(), is(closeTo(15)));
+
     }
 
     @Test
@@ -99,9 +100,7 @@ public class ShoppingCartTests {
         cart.add(new Product("i1", 10.0));
 
         cart.applyDiscountPercentage(10.0);
-
         cart.applyDiscountPercentage(10.0);
-
         assertThat(cart.getTotal(), is(closeTo(8.1)));
     }
 
